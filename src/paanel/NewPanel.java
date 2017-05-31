@@ -34,7 +34,7 @@ public class NewPanel extends JPanel implements ActionListener {
     private Sound sonido;
     private int azar= (int)(Math.random()*190);
     private int azar1= (int)(Math.random()*400);
-    private int azar2= (int)(Math.random()*610);
+    private int azar2=(int)(Math.random()*610);
     
     
 
@@ -42,7 +42,7 @@ public class NewPanel extends JPanel implements ActionListener {
         this.sonido = new Sound("soundtrack.wav");
         addKeyListener(new TAdapter());
         setFocusable(true);
-        this.time = new Timer(25+v, this);
+        this.time = new Timer(25, this);
 //        this.time2 = new Timer(1000, this);
 //        this.time2.start();
         
@@ -84,13 +84,13 @@ public class NewPanel extends JPanel implements ActionListener {
        
         for(int i=200+f;i>-0-z;i-=150){
             
-            g.drawImage(Plataforma, (azar), ( i), (azar + 45), (i + 45), plataforma * 45, 0, plataforma * 45 + 45, 45, this);
+            g.drawImage(Plataforma, (azar), ( i+200), (azar + 45), (i + 45 +200), plataforma * 45, 0, plataforma * 45 + 45, 45, this);
             
         }
          for(int i=200+f;i>-0-z;i-=150){
             
             
-            g.drawImage(Plataforma, (azar1), ( i), (azar1 + 45), (i + 45), plataforma * 45, 0, plataforma * 45 + 45, 45, this);
+            g.drawImage(Plataforma, (azar1), ( i+380), (azar1 + 45), (i + 45+380), plataforma * 45, 0, plataforma * 45 + 45, 45, this);
             
         }
           for(int i=200+f;i>-0-z;i-=150){
@@ -115,7 +115,7 @@ public class NewPanel extends JPanel implements ActionListener {
     public void Saltos() {
             for(int i=200+f;i>-500-z;i-=150){
             
-            Rectangle p= new Rectangle((azar), (i+20), (45), (5));  
+            Rectangle p= new Rectangle((azar), (i+20+200), (45), (5));  
             Rectangle Reset1 = new Rectangle((310), (w + 240), 45, 5);
             
             if (Reset1.intersects(getBounds())) {
@@ -133,7 +133,7 @@ public class NewPanel extends JPanel implements ActionListener {
      public void Saltos2() {
             for(int i=200+f;i>-500-z;i-=150){
             
-            Rectangle p= new Rectangle((azar1), (i+20), (45), (5));  
+            Rectangle p= new Rectangle((azar1), (i+20+380), (45), (5));  
             Rectangle Reset1 = new Rectangle((310), (w + 240), 45, 5);
             
             if (Reset1.intersects(getBounds())) {

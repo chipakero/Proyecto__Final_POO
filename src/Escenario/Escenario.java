@@ -15,7 +15,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import paanel.*;
 
-/**
+/**y
  *
  * @author Diego
  */
@@ -25,6 +25,7 @@ public class Escenario extends JFrame {
         
 //        add(new Panel2());
         setTitle("Ninja Jump");
+        
         setSize(640, 480);
         setLocationRelativeTo(null);
         setResizable(false);
