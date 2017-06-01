@@ -35,7 +35,7 @@ public class NewPanel extends JPanel implements ActionListener {
     private int azar= (int)(Math.random()*190);
     private int azar1= (int)(Math.random()*400);
     private int azar2=(int)(Math.random()*610);
-    
+    private int contador=0;
     
 
     public NewPanel() {
@@ -75,6 +75,14 @@ public class NewPanel extends JPanel implements ActionListener {
         Image SaltoIzq = loadImage("Saltar1.png");
         Image SaltoDer = loadImage("Saltar2.png");
         Image Plataforma = loadImage("plataforma.png");
+        
+        if(this.contador==500){
+           this.contador=0;
+           this.azar= (int)(Math.random()*190);
+           this.azar1= (int)(Math.random()*400);
+           this.azar2=(int)(Math.random()*610);
+        }
+        contador++;
         for (int i = 0 + f; i > -500 - z; i -= 480) {
             g.drawImage(Fondo, 0, i, this);
         }
